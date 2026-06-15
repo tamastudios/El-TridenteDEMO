@@ -151,12 +151,13 @@ header.scrolled .nav-links a:hover{background:rgba(255,210,24,.16);color:var(--g
 .nav-links a:hover{color:var(--gold)}
 .nav-cta{display:flex;align-items:center;gap:8px;flex-shrink:0}
 .nav-phone{display:none!important}
-.nav-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:62}
 .hamburger{display:none;width:46px;height:46px;border-radius:12px;background:rgba(255,255,255,.16);position:relative}
 header.scrolled .hamburger{background:rgba(255,255,255,.16)}
 .hamburger span{position:absolute;left:12px;right:12px;height:2.5px;background:#fff;border-radius:2px;transition:.3s}
 header.scrolled .hamburger span{background:#fff}
 .hamburger span:nth-child(1){top:16px}.hamburger span:nth-child(2){top:22px}.hamburger span:nth-child(3){top:28px}
+body.menu-open .hamburger{background:transparent}
+body.menu-open .hamburger span{background:var(--dark) !important}
 body.menu-open .hamburger span:nth-child(1){top:22px;transform:rotate(45deg)}
 body.menu-open .hamburger span:nth-child(2){opacity:0}
 body.menu-open .hamburger span:nth-child(3){top:22px;transform:rotate(-45deg)}
@@ -478,8 +479,6 @@ header.scrolled .lang-btn{color:var(--muted)}
   body.menu-open .nav-links{transform:none}
   .nav-links a{color:var(--ink) !important;font-size:1.08rem;padding:.8em 1em;border-radius:12px}
   .nav-links a:hover{background:rgba(0,0,0,.06) !important;color:var(--gold-deep)!important}
-  .nav-overlay{display:block;opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s ease}
-  body.menu-open .nav-overlay{opacity:1;visibility:visible}
   body.menu-open{overflow:hidden}
   /* al abrir el menú quitamos el filtro de la cabecera: si no, el blur la convierte
      en bloque contenedor del panel fixed y este se encoge a la altura de la cabecera */
@@ -541,7 +540,6 @@ header.scrolled .lang-btn{color:var(--muted)}
     </div>
   </div>
 </header>
-<div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
 
 <!-- HERO -->
 <section class="hero" id="inicio">
@@ -1568,7 +1566,12 @@ addEventListener('scroll',()=>$('#header').classList.toggle('scrolled', scrollY>
 function closeMenu(){ document.body.classList.remove('menu-open'); $('#hamburger').setAttribute('aria-expanded',false); }
 $('#hamburger').onclick=()=>{ const o=document.body.classList.toggle('menu-open'); $('#hamburger').setAttribute('aria-expanded',o); };
 $$('#navlinks a').forEach(a=>a.onclick=closeMenu);
-const _ovl=$('#nav-overlay'); if(_ovl) _ovl.onclick=closeMenu;
+// cerrar al tocar fuera del panel (sin capa de oscurecimiento)
+document.addEventListener('click',e=>{
+  if(!document.body.classList.contains('menu-open')) return;
+  if(e.target.closest('#navlinks') || e.target.closest('#hamburger')) return;
+  closeMenu();
+});
 
 /* ---------- formulario contacto → WhatsApp ---------- */
 $('#f-send').onclick=()=>{
