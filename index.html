@@ -481,6 +481,9 @@ header.scrolled .lang-btn{color:var(--muted)}
   .nav-overlay{display:block;opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s ease}
   body.menu-open .nav-overlay{opacity:1;visibility:visible}
   body.menu-open{overflow:hidden}
+  /* al abrir el menú quitamos el filtro de la cabecera: si no, el blur la convierte
+     en bloque contenedor del panel fixed y este se encoge a la altura de la cabecera */
+  body.menu-open header.scrolled{backdrop-filter:none !important;-webkit-backdrop-filter:none !important}
   .hamburger{display:block;z-index:70}
   .nav-cta .btn{display:none}
   .menu-grid{grid-template-columns:1fr}
