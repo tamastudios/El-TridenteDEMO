@@ -932,7 +932,67 @@ function hourT(h){return LANG==='es'?h:h.replace(/cerrado/i,CLOSED_T[LANG]||h);}
 function getIngredients(){const l=T('ingList');return Array.isArray(l)?l:(DATA.menuIngredients||[]);}
 /* Traducciones de platos: clave = id del plato en DEFAULTS.menu. El español (canónico) vive en DEFAULTS. */
 const MENU_T={
-ca:{},
+ca:{
+  p1:{name:"Anxoves del Cantàbric",desc:"Amb torradetes i melmelada de tomàquet."},
+  p2:{name:"Pernil ibèric tallat a ganivet",desc:"Tallat a ganivet."},
+  p3:{name:"Pop a la gallega amb patata",desc:"Amb patata i pebre vermell."},
+  p4:{name:"6 croquetes de pernil ibèric casolanes",desc:"Cremoses, fetes a casa."},
+  p5:{name:"6 croquetes de calamar en la seva tinta",desc:"Casolanes, amb tinta de calamar."},
+  p6:{name:"Calamars a l'andalusa",desc:"Arrebossats a l'estil andalús, amb llimona."},
+  p7:{name:"Calamars a la romana",desc:"Cruixents, amb llimona."},
+  p8:{name:"Sípia fregida",desc:"Sípia petita fregida."},
+  p9:{name:"Bunyols de bacallà amb llima i mel",desc:"Bacallà en bunyol, llima i mel."},
+  p10:{name:"Fingers de pollastre amb salsa agredolça",desc:"Tires de pollastre amb salsa agredolça."},
+  p11:{name:"Bombes d'albergínia arrebossada",desc:"Albergínia arrebossada i cruixent."},
+  p12:{name:"Verat",desc:"Verat amb pebre vermell."},
+  p13:{name:"Callos a la madrilenya",desc:"Guisat tradicional madrileny."},
+  p14:{name:"Patates braves",desc:"Amb salsa brava."},
+  p15:{name:"Patates braves especials a la planxa",desc:"A la planxa, amb salsa especial."},
+  p16:{name:"Pa amb tomàquet",desc:"Pa amb tomàquet i oli d'oliva."},
+  p17:{name:"Panet mediterrani",desc:"Pa de la casa."},
+  ef1:{name:"Amanida de formatge de cabra",desc:"Vinagreta de bacó i fruits secs."},
+  ef2:{name:"Amanida mediterrània amb tonyina",desc:"Verdures de temporada i tonyina."},
+  ef3:{name:"Amanida Cèsar amb pollastre cruixent",desc:"Pollastre cruixent, parmesà i salsa Cèsar."},
+  ef4:{name:"Burrata amb mozzarella i alfàbrega",desc:"Burrata cremosa amb alfàbrega."},
+  ef5:{name:"Ventresca de tonyina, tomàquet i ceba",desc:"Ventresca amb tomàquet i ceba tendra."},
+  ef6:{name:"Carpaccio de bacallà amb faves",desc:"Làmines de bacallà amb favetes."},
+  ef7:{name:"Carpaccio de vedella amb parmesà",desc:"Vedella amb encenalls de parmesà."},
+  ef8:{name:"Steak tartar de filet de vedella",desc:"Filet de vedella amanit al moment."},
+  ef9:{name:"Tataki de tonyina vermella Balfegó",desc:"Tonyina vermella Balfegó marcada."},
+  m1:{name:"Gambes a l'allet",desc:"Gambes saltades a l'allet."},
+  m2:{name:"Musclos al vapor o a la marinera",desc:"Al vapor o en salsa marinera."},
+  m3:{name:"Cloïsses a la planxa o a la marinera",desc:"A la planxa o a la marinera."},
+  m4:{name:"6 gambes llistades a la planxa",desc:"A la planxa amb sal."},
+  m5:{name:"Tellerines a la planxa",desc:"Tellerines fresques a la planxa."},
+  m6:{name:"Escamarlà obert a la planxa (1 u.)",desc:"Escamarlà fresc a la planxa."},
+  pz1:{name:"Suquet de rap amb cloïsses i gambes",desc:"Guisat mariner de rap, cloïsses i gambes."},
+  pz2:{name:"Pop a la brasa",desc:"Pop fet a la brasa."},
+  pz3:{name:"Rèmol a la brasa o a la planxa",desc:"Rèmol fresc a la brasa o planxa."},
+  pz4:{name:"Bacallà a la mussolina d'all",desc:"Bacallà gratinat amb mussolina d'all."},
+  pz5:{name:"Bacallà amb samfaina",desc:"Bacallà amb samfaina de verdures."},
+  pz6:{name:"Lluç a la romana",desc:"Lloms de lluç arrebossats."},
+  pz7:{name:"Calamarsets a la planxa",desc:"Xipirons petits a la planxa."},
+  pz8:{name:"Sípia a la planxa",desc:"Sípia a la planxa amb all-i-oli."},
+  pz9:{name:"Daurada a la brasa",desc:"Daurada fresca a la brasa."},
+  a1:{name:"Paella marinera",desc:"Arròs amb marisc i peix."},
+  a2:{name:"Arròs caldós de llamàntol",desc:"Arròs melós amb llamàntol."},
+  a3:{name:"Arròs negre",desc:"Arròs amb tinta de calamar."},
+  a4:{name:"Arròs del senyoret",desc:"Marisc pelat, llest per menjar."},
+  a5:{name:"Arròs de muntanya",desc:"Arròs amb carn i verdures."},
+  a6:{name:"Arròs de verdures",desc:"Arròs amb verdures de temporada."},
+  a7:{name:"Fideuà marinera",desc:"Fideus amb marisc i peix."},
+  cn1:{name:"Filet de vedella a la brasa",desc:"Filet a la brasa amb guarnició."},
+  cn2:{name:"Entrecot de vedella a la brasa",desc:"400 g aprox., a la brasa amb guarnició."},
+  cn3:{name:"Ploma de porc a la brasa",desc:"Ploma ibèrica a la brasa."},
+  cn4:{name:"Conill a la brasa",desc:"Conill a la brasa amb all-i-oli."},
+  cn5:{name:"Pollastre a la brasa",desc:"Pollastre a la brasa amb guarnició."},
+  cn6:{name:"Botifarra a la brasa",desc:"Botifarra del país a la brasa."},
+  cn7:{name:"Salses",desc:"Romesco, all-i-oli, maionesa o salsa brava."},
+  pr1:{name:"Mariscada",desc:"Gamba llagostinera, escamarlans, gamba vermella, llagostins de Sant Carles, navalles, musclos i més."},
+  pr2:{name:"Graellada de peix",desc:"Rap, rèmol, sípia, calamar, gamba llagostinera i musclos."},
+  pr3:{name:"Graellada de carn a la brasa",desc:"Pollastre, vedella, xai i botifarra."},
+  pr4:{name:"Graellada de verdures a la brasa",desc:"Verdures de temporada amb romesco."}
+},
 en:{
   p1:{name:"Cantabrian anchovies",desc:"With toast and tomato jam."},
   p2:{name:"Hand-carved Iberian ham",desc:"Cut by hand."},
@@ -1755,6 +1815,37 @@ function renderOwnerPanel(){
   const addDish=document.createElement('button'); addDish.className='add-btn'; addDish.textContent='+ Añadir plato';
   addDish.onclick=()=>{ d.dishes.push({name:'Nuevo plato',desc:'',price:''}); renderDishes(); };
   c2.appendChild(addDish);
+
+  /* ---------- Soporte: contactar con TAMA Studios ---------- */
+  const TAMA_SUPPORT_URL='https://kdeeeoltygdrdyouxndo.supabase.co/functions/v1/dynamic-endpoint';
+  const sup={name:'',email:'',subject:'',message:''};
+  const c3=card();
+  c3.insertAdjacentHTML('beforeend',
+    '<h3 style="font-size:1.1rem;margin-bottom:4px">🛟 Soporte · Contacta con TAMA Studios</h3>'+
+    '<p class="hint" style="margin-bottom:16px">¿Una duda, un cambio en la web o algo que no funciona? Escríbenos y lo recibimos al instante.</p>');
+  c3.appendChild(fld('Tu nombre','¿Con quién hablamos?','',v=>sup.name=v));
+  c3.appendChild(fld('Tu email','Para poder responderte','',v=>sup.email=v));
+  c3.appendChild(fld('Asunto','Ej: Cambiar el horario','',v=>sup.subject=v));
+  c3.appendChild(fld('Mensaje','Cuéntanos qué necesitas','',v=>sup.message=v,'text',true));
+  const note=document.createElement('div'); note.style.cssText='margin-top:10px;font-size:.92rem;min-height:1.2em';
+  const send=document.createElement('button'); send.className='btn btn-primary'; send.style.cssText='margin-top:6px'; send.textContent='Enviar a soporte';
+  send.onclick=async()=>{
+    note.textContent='';
+    if(!sup.name.trim()||!sup.email.trim()||!sup.message.trim()){ note.style.color='#c0392b'; note.textContent='Completa nombre, email y mensaje.'; return; }
+    send.disabled=true; const old=send.textContent; send.textContent='Enviando…';
+    try{
+      const res=await fetch(TAMA_SUPPORT_URL,{method:'POST',headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({name:sup.name,email:sup.email,subject:sup.subject,message:sup.message,company:'El Tridente'})});
+      const out=await res.json().catch(()=>({}));
+      if(res.ok&&out.ok){
+        toast('✓ Mensaje enviado a soporte');
+        note.style.color='#2e7d32'; note.textContent='¡Gracias! Hemos recibido tu mensaje y te responderemos pronto.';
+        sup.name=sup.email=sup.subject=sup.message=''; $$('input,textarea',c3).forEach(el=>el.value='');
+      } else { note.style.color='#c0392b'; note.textContent=out.error||'No se pudo enviar. Inténtalo de nuevo.'; }
+    }catch(e){ note.style.color='#c0392b'; note.textContent='Error de conexión. Inténtalo de nuevo.'; }
+    finally{ send.disabled=false; send.textContent=old; }
+  };
+  c3.appendChild(send); c3.appendChild(note);
 }
 
 /* ---------- imagen reutilizable en admin ---------- */
