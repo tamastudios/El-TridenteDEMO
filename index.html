@@ -386,13 +386,13 @@ footer{background:#0a0a0a;color:#cdbfae;padding:64px 0 26px}
 .add-btn:hover{border-color:var(--primary);background:#fdf1ee}
 
 /* SIN GLUTEN BANNER */
-.sg-banner{background:var(--gold);color:#1a1a1a;padding:18px 0;text-align:center}
+.sg-banner{background:#111;color:#fff;padding:18px 0;text-align:center}
 .sg-banner-inner{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap}
-.sg-banner h2,.sg-banner h3{font-family:var(--disp);font-size:1.35rem;color:#1a1a1a;font-weight:700}
-.sg-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(0,0,0,.1);border:1.5px solid rgba(0,0,0,.28);border-radius:999px;padding:.38em .95em;font-size:.82rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#1a1a1a}
-.sg-banner p{color:rgba(0,0,0,.72);font-size:.96rem;max-width:55ch;margin:0 auto}
-.sg-banner .btn-ghost{background:#111;color:#fff;border-color:#111!important}
-.sg-banner .btn-ghost:hover{background:#000;border-color:#000!important}
+.sg-banner h2,.sg-banner h3{font-family:var(--disp);font-size:1.35rem;color:#fff;font-weight:700}
+.sg-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,210,24,.15);border:1.5px solid rgba(255,210,24,.5);border-radius:999px;padding:.38em .95em;font-size:.82rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--gold)}
+.sg-banner p{color:rgba(255,255,255,.82);font-size:.96rem;max-width:55ch;margin:0 auto}
+.sg-banner .btn-ghost{background:var(--gold);color:#111;border-color:var(--gold)!important}
+.sg-banner .btn-ghost:hover{background:#ffdc4d;border-color:#ffdc4d!important}
 
 /* MENÚ DIARIO */
 .daily{background:var(--grad-basil);color:#1a1a1a;position:relative;overflow:hidden}
@@ -592,7 +592,7 @@ header.scrolled .lang-btn{color:var(--muted)}
   <div class="container sg-banner-inner">
     <span style="font-size:2rem" role="img" aria-label="Pescado fresco">🐟</span>
     <div>
-      <h2 id="sg-title" style="font-family:var(--disp);font-size:1.35rem;font-weight:700;color:#1a1a1a;margin-bottom:.2em">Producto del día, directo de la lonja</h2>
+      <h2 id="sg-title" style="font-family:var(--disp);font-size:1.35rem;font-weight:700;color:#fff;margin-bottom:.2em">Producto del día, directo de la lonja</h2>
       <p id="sg-text">Pescado y marisco fresco seleccionado cada mañana, arroces melosos y carnes a la brasa. <span class="sg-badge" id="sg-badge">Pescado fresco</span></p>
     </div>
     <a href="#carta" class="btn btn-ghost" id="sg-cta" style="flex-shrink:0">Ver carta</a>
